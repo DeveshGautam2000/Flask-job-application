@@ -103,7 +103,10 @@
             <label class="form-check-label" for="student">Student</label>
           </div>
         </div>
-        <button class="btn btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn btn-primary mb-3" type="submit">Submit</button>
+        {% with message = get_flashed_messages() %} {% if message %}
+        <div class="alert alert-success">From was submitted Sucessfully!!</div>
+        {% endif %} {% endwith %}
       </form>
     </div>
   </body>
